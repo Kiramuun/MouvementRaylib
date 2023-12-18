@@ -1,21 +1,22 @@
 ﻿using System.Numerics;
 using MouvementRaylib;
 using Raylib_cs;
+using static Raylib_cs.Raylib;
 
-Raylib.InitWindow(1000, 1000, "Hello World");
+InitWindow(1000, 1000, "Hello World");
 
 GameObject player = new GameObject();
 GameObject grid = new GameObject();
 Scene main = new Scene("Laby");
 Mouvement _mouv = new Mouvement();
-
-while (!Raylib.WindowShouldClose())
+Raylib.SetTargetFPS(60);
+while (!WindowShouldClose())
 {
-    Raylib.BeginDrawing();
+    BeginDrawing();
     
     main.Render();
 
-    Raylib.EndDrawing();
+    EndDrawing();
 }
 
-Raylib.CloseWindow();
+CloseWindow();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Raylib_cs;
+using static Raylib_cs.Raylib;
 
 namespace MouvementRaylib
 {
@@ -36,10 +37,10 @@ namespace MouvementRaylib
 
         public void Render()
         {
-            Raylib.ClearBackground(Color.BLACK);
+            ClearBackground(Color.RAYWHITE);
 
-            for (int i = 100; i <= 900; i += 50) { Raylib.DrawLine(i, 100, i, 900, Color.RAYWHITE); }
-            for (int i = 100; i <= 900; i += 50) { Raylib.DrawLine(100, i, 900, i, Color.RAYWHITE); }
+            for (int i = 100; i <= 900; i += 50) { DrawLine(i, 100, i, 900, Color.RED); }
+            for (int i = 100; i <= 900; i += 50) { DrawLine(100, i, 900, i, Color.RED); }
 
             foreach (GameObject _gObject in GameObjects)
             {
